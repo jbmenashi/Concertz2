@@ -8,7 +8,7 @@
 
 Concert.destroy_all
 
-request = RestClient.get("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=345&size=200&apikey=")
+request = RestClient.get("https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=345&size=200&apikey=#{ENV['API_KEY']}")
 response = JSON.parse(request)
 
 response["_embedded"]["events"].each do |event|
@@ -21,6 +21,3 @@ end
 byebug
 
 "hi"
-
-
-# ,
