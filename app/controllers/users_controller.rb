@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action  :find_user, :only [:show, :update, :edit, :destroy]
+  before_action  :find_user, only: [:show, :update, :edit, :destroy]
 
   def index
     @users = User.all
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    if @user valid?
+    if @user.valid?
       redirect_to user_path(@user)
     else
       flash[:errors] = @user.errors.full_messages
