@@ -3,3 +3,11 @@
 <%= @concert.location %>
 <%= @concert.genre %>
 <%= @concert.venue %>
+
+<h3>Groups</h3>
+  <ul>
+    <% @concert.squads.each do |squad| %>
+      Squad: <%= link_to squad.name, squad %>
+      Size: <%= squad.size %>
+    <% end %>
+  </ul>
