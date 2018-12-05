@@ -1,0 +1,7 @@
+<h1> User Index Page</h1>
+<% @users.each do |user| %>
+<%= user.name %>
+<%= user.age %>
+<%= user.bio%>
+<img src=<%=user.image%> >
+<% end %>

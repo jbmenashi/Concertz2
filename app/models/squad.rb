@@ -1,2 +1,0 @@
-class Squad < ApplicationRecord
-end
