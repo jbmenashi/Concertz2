@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_143522) do
+ActiveRecord::Schema.define(version: 2018_12_05_222908) do
 
   create_table "concerts", force: :cascade do |t|
     t.string "location"
@@ -50,17 +50,21 @@ ActiveRecord::Schema.define(version: 2018_12_05_143522) do
   create_table "user_squads", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "squad_id"
+    t.index ["squad_id"], name: "index_user_squads_on_squad_id"
+    t.index ["user_id"], name: "index_user_squads_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
     t.string "name"
     t.text "bio"
     t.integer "age"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
