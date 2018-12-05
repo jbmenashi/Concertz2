@@ -1,0 +1,11 @@
+<h1> Squad Page </h1>
+
+Squad Name: <%= @squad.name %>
+ <%= link_to "Edit Squad Name", edit_squad_path %>
+
+Squad Size: <%= @squad.size %>
+
+Photo Reel:
+<% @squad.photos.each do |photo| %>
+  <img src=<%=photo.img_url%> >
+<% end %>
