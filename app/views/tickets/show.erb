@@ -1,0 +1,5 @@
+<h1> Ticket Page </h1>
+
+<%= link_to @ticket.squad.name, squad_path(@ticket.squad) %>
+<%= link_to @ticket.concert.name, squad_path(@ticket.concert) %>
+<%= @ticket.readable_datetime %>
