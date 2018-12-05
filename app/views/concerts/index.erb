@@ -1,8 +1,8 @@
 <h1> Concert Search </h1>
 
 <%= form_tag("/concerts", method: "get") do %>
-  <%= label_tag(:concert, "Search for a concert") %>
-  <%= text_field_tag(:concert, params[:artist]) %>
+  <%= label_tag(:artist, "Search for a concert") %>
+  <%= text_field_tag(:artist, params[:artist]) %>
   <%= submit_tag("SEARCH")%>
 <% end %>
 
