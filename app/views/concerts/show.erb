@@ -4,10 +4,12 @@
 <%= @concert.genre %>
 <%= @concert.venue %>
 
-<h3>Groups</h3>
+<h3>Squads</h3>
   <ul>
     <% @concert.squads.each do |squad| %>
       Squad: <%= link_to squad.name, squad %>
       Size: <%= squad.size %>
     <% end %>
   </ul>
+
+<%= button_to "Create New Squad", new_squad_path %>

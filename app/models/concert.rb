@@ -8,7 +8,7 @@ def self.search(artist)
       con.artist.include?(artist)
     end
   else
-    self.all
+    []
   end
 end
 
