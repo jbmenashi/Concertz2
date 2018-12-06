@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def login
-    #code
+    render layout: 'login'
   end
 
   def authorize

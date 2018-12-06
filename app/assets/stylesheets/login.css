@@ -1,0 +1,21 @@
+body {
+  background-image: url('image.png');
+  background-size: cover;
+}
+
+.login_form{
+  background-color: white;
+  width: 300px;
+  height:100px;
+  margin: 0 auto;
+  margin-top: 240px;
+  align-items: center;
+  border: 5px solid black;
+  display:flex;
+  justify-content: center;
+  display:grid;
+}
+
+#login_button {
+  background-color: purple;
+}
