@@ -1,12 +1,14 @@
 body {
   background-image: url('login-image.png');
   background-size: cover;
+  font-family: 'Dosis', sans-serif;
 }
 
 h1 {
   font-size: 100px;
   text-align: center;
   padding-top: 50px;
+  font-family: 'Dosis', sans-serif;
 }
 
 .login_form{
