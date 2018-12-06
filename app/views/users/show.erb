@@ -1,14 +1,25 @@
-<h1>User Profile Page</h1>
+<h1>My Profile</h1>
 
-<%= @user.name %>
-<%= @user.age %>
-<%= @user.bio %>
-<img src=<%= @user.image %>>
+<img src=<%= @user.image %>, id="profile_pic">
 
-<%= link_to "Create/Edit Profile", edit_user_path %>
+<div class="user_info">
+  <strong>Name: </strong> <%= @user.name %><br>
+  <strong>Age: </strong> <%= @user.age %><br>
+  <strong>Bio: </strong> <%= @user.bio %><br>
+  <strong>Tickets: </strong>
+    <ul id="ticket_list">
+      <% @user.tickets.each do |ticket| %>
+        <li><%= link_to ticket.concert.artist, ticket_path(ticket) %></li>
+      <% end %>
+    </ul>
+</div>
 
-<% @user.tickets.each do |ticket| %>
-  <%= link_to ticket.concert.artist, ticket_path(ticket) %>
-<% end %>
 
-<%= link_to "Search for a Concert", concerts_path %>
+
+
+
+<div id="edit_profile"><%= link_to "Create/Edit Profile", edit_user_path, class: "ui inverted standard button" %></div>
+
+
+
+<div id="search"><%= link_to "Search for a Concert", concerts_path, class: "ui inverted standard button" %></div>
