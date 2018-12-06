@@ -1,0 +1,48 @@
+/* // Place all the styles related to the Tickets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/ */
+
+h1{
+  font-family: 'Teko', sans-serif;
+  font-size: 50px;
+}
+
+
+a {
+  color:red;
+  display:block;
+}
+
+.ui.red.basic.button{
+  display: inline-block;
+  font-size: 25px;
+}
+
+.everything{
+  background-image: url('ticket-background.jpg');
+  background-position: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 25px;
+  display: block;
+  /* margin-left: 500px; */
+  /* margin-right: 500px; */
+  margin: 150px auto 0;
+  /* width: 40%; */
+}
+
+.everything .ticket {
+  width: 40%;
+  margin: 0 auto;
+  padding: 75px 0 115px 75px;
+}
+
+.everything .ticket p{
+  padding:2px 0;
+  margin-bottom: 0;
+}
+
+.btn-box {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
