@@ -1,11 +1,17 @@
 <h1> Concert Page </h1>
-<strong><%= @concert.artist %></strong>
-<%= @concert.location %>
-<%= @concert.genre %>
-<%= @concert.venue %>
-<%= @concert.readable_datetime %>
+
+<div class="concert_info">
+  <ul>
+
+<span style = "text-decoration: underline;"><strong><%= @concert.artist %></strong></span>
+<li>Location: <%= @concert.location %></li>
+<li>Genre: <%= @concert.genre %></li>
+<li>Venue: <%= @concert.venue %></li>
+<li>Time: <%= @concert.readable_datetime %></li>
+</ul>
+</div>
 
 <%= form_tag tickets_path do %>
   <%= hidden_field_tag :concert_id, @concert.id %>
-  <%= submit_tag "Buy Ticket" %>
+  <%= submit_tag "Buy Ticket", class: "ui black button" %>
 <% end %>

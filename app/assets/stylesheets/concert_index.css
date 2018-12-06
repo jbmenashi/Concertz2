@@ -15,3 +15,13 @@ h1 {
 .concert_form {
   margin-left: 20px;
 }
+
+.concert_info{
+font-size: 30px;
+line-height: 51px;
+}
+
+.ui.black.button{
+  margin-left: 20px;
+  width:30%;
+}
