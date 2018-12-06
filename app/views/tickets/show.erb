@@ -1,7 +1,20 @@
-<h1> Ticket Page </h1>
+<div class="everything">
+<div class="ticket">
+  <h1> Ticket Page </h1>
 
-<%= @ticket.user.username %>
-<%= @ticket.concert.artist %>
+  <p>Username: <%= @ticket.user.username %></p>
+  <p>Artist: <%= @ticket.concert.artist %></p>
+  <p>Venue: <%= @ticket.concert.venue %></p>
+  <p>Location: <%= @ticket.concert.location %></p>
+  <p>Genre: <%= @ticket.concert.genre %></p>
+  <p>Date: <%= @ticket.concert.readable_datetime %></p>
+</div>
+</div>
 
-<%= link_to "Back To Profile", user_path(@user) %>
-<%= link_to "Back To Search", concerts_path %>
+
+
+<div class="btn-box">
+  <button class="ui red basic button">
+  <%= link_to "Back To Profile", user_path(@user) %></button>
+  <button class="ui red basic button"><%= link_to "Back To Search", concerts_path %> </button>
+</div>

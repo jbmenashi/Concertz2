@@ -3,6 +3,7 @@ class TicketsController < ApplicationController
   def show
     @ticket = Ticket.find(params[:id])
     @user = session_user
+    render layout: 'tickets'
   end
 
   def create
