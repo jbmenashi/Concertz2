@@ -3,3 +3,26 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+h1 {
+  float: right;
+  color: white;
+  font-size: 60px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+
+#edit_form {
+  clear: right;
+  float: right;
+  text-align: right;
+  margin-right: 20px;
+  line-height: 50px;
+  color: white;
+  font-size: 30px;
+}
+
+.ui.inverted.standard.button {
+  width: 150px;
+}
