@@ -1,7 +1,14 @@
 <h1>User Profile Page</h1>
+
 <%= @user.name %>
 <%= @user.age %>
-<%= @user.bio%>
-<img src=<%=@user.image%> >
+<%= @user.bio %>
+<img src=<%= @user.image %>>
 
-<%= button_to "Join a Squad", new_user_squad_path %>
+<%= link_to "Create/Edit Profile", edit_user_path %>
+
+<% @user.tickets.each do |ticket| %>
+  <%= link_to ticket.concert.artist, ticket_path(ticket) %>
+<% end %>
+
+<%= link_to "Search for a Concert", concerts_path %>

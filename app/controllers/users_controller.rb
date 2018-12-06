@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action  :find_user, only: [:show, :update, :edit, :destroy]
 
   def index
     @users = User.all
@@ -7,6 +6,7 @@ class UsersController < ApplicationController
 
 
   def show
+    @user = session_user
   end
 
 
@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     @user = User.find_or_create_by(username: params[:username])
 
     session[:user_id] = @user.id
+    redirect_to user_path(@user)
   end
 
 
@@ -37,10 +38,12 @@ class UsersController < ApplicationController
 
 
   def edit
+    @user = session_user
   end
 
 
   def update
+    @user = session_user
     if @user.update(user_params)
       redirect_to user_path(@user)
     else

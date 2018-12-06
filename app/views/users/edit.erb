@@ -8,10 +8,6 @@
 
 
 <%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.text_field :password %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :age %>
@@ -19,6 +15,6 @@
   <%= f.label :bio %>
   <%= f.text_field :bio %>
   <%= f.label :image %>
-  <%= f.image_tag :image %>
+  <%= f.text_field :image %>
   <%= f.submit %>
 <% end %>
