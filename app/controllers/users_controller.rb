@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
 
   def show
-    @user = session_user
+    @user = User.find_by(id: params[:id])
     render layout: 'user_show'
   end
 

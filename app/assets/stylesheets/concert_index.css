@@ -1,0 +1,17 @@
+body {
+  background-image: url('concert-search-2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  color: black;
+  margin-left: 20px;
+  font-size: 60px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.concert_form {
+  margin-left: 20px;
+}

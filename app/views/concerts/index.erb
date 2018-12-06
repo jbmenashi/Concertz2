@@ -1,14 +1,20 @@
 <h1> Concert Search </h1>
 
-<%= form_tag("/concerts", method: "get") do %>
-  <%= label_tag(:artist, "Search for a concert") %>
-  <%= text_field_tag(:artist, params[:artist]) %>
-  <%= submit_tag("SEARCH")%>
+<div class="concert_form">
+  <%= form_tag("/concerts", method: "get") do %>
+  <%= label_tag(:artist, "Artist Name:") %>
+  <%= text_field_tag(:artist, params[:artist]) %><br><br>
+  <%= submit_tag "SEARCH", class: "ui black button"%>
 <% end %>
+</div>
 
 <ul><% @concerts.each do |concert| %>
-  <li>  <%= link_to concert.artist, concert_path(concert) %> </li>
-  <li><%= concert.location %></li>
-  <li><%= concert.venue %></li><br>
+  <li><strong>Show: </strong><%= link_to "#{concert.artist} on #{concert.readable_datetime}", concert_path(concert) %> </li>
+  <li><strong>City: </strong><%= concert.location %></li>
+  <li><strong>Venue: </strong><%= concert.venue %></li><br>
   <% end  %>
 </ul>
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>

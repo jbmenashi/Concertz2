@@ -3,13 +3,9 @@ class Concert < ApplicationRecord
   has_many :users, through: :tickets
 
 def self.search(artist)
-  if artist
-    Concert.all.select do |con|
-      con.artist.include?(artist)
+     Concert.all.select do |con|
+      con.artist.include?(artist) || con.artist.include?(artist.capitalize)
     end
-  else
-    []
-  end
 end
 
 def eastern_time
