@@ -3,19 +3,26 @@ body {
   background-size: cover;
 }
 
+h1 {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 50px;
+}
+
 .login_form{
-  background-color: white;
-  width: 300px;
+  background-color: Lavender;
+  width: 400px;
   height:100px;
   margin: 0 auto;
-  margin-top: 240px;
   align-items: center;
   border: 5px solid black;
   display:flex;
   justify-content: center;
-  display:grid;
+  display: grid;
+  font-weight: bold;
 }
 
-#login_button {
-  background-color: purple;
+.ui.purple.button {
+  margin-left: 10px;
+  border: 1px solid black;
 }

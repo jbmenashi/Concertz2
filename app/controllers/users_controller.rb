@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = session_user
+    render layout: 'user_show'
   end
 
 
