@@ -40,6 +40,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = session_user
+    render layout: 'user_edit'
   end
 
 
