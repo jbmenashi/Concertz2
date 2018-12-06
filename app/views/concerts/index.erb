@@ -7,6 +7,8 @@
 <% end %>
 
 <ul><% @concerts.each do |concert| %>
-<li>  <%= link_to concert.artist, concert_path(concert) %> </li>
+  <li>  <%= link_to concert.artist, concert_path(concert) %> </li>
+  <li><%= concert.location %></li>
+  <li><%= concert.venue %></li><br>
   <% end  %>
 </ul>

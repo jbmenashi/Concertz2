@@ -3,13 +3,9 @@
 <%= @concert.location %>
 <%= @concert.genre %>
 <%= @concert.venue %>
+<%= @concert.readable_datetime %>
 
-<h3>Squads</h3>
-  <ul>
-    <% @concert.squads.each do |squad| %>
-      Squad: <%= link_to squad.name, squad %>
-      Size: <%= squad.size %>
-    <% end %>
-  </ul>
-
-<%= button_to "Create New Squad", new_squad_path %>
+<%= form_tag tickets_path do %>
+  <%= hidden_field_tag :concert_id, @concert.id %>
+  <%= submit_tag "Buy Ticket" %>
+<% end %>

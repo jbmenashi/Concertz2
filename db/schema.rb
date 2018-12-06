@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_222908) do
+ActiveRecord::Schema.define(version: 2018_12_05_235351) do
 
   create_table "concerts", force: :cascade do |t|
     t.string "location"
@@ -19,41 +19,16 @@ ActiveRecord::Schema.define(version: 2018_12_05_222908) do
     t.string "venue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "squad_id"
-    t.string "url"
-    t.string "caption"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "squads", force: :cascade do |t|
-    t.string "name"
-    t.integer "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "date_and_time"
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.datetime "date_and_time"
-    t.integer "squad_id"
     t.integer "concert_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["concert_id"], name: "index_tickets_on_concert_id"
-    t.index ["squad_id"], name: "index_tickets_on_squad_id"
-  end
-
-  create_table "user_squads", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "squad_id"
-    t.index ["squad_id"], name: "index_user_squads_on_squad_id"
-    t.index ["user_id"], name: "index_user_squads_on_user_id"
+    t.index ["concert_id"], name: "index_tickets_on_concert_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

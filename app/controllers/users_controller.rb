@@ -14,6 +14,16 @@ class UsersController < ApplicationController
     @user=User.new
   end
 
+  def login
+    #code
+  end
+
+  def authorize
+    @user = User.find_or_create_by(username: params[:username])
+
+    session[:user_id] = @user.id
+  end
+
 
   def create
     @user = User.create(user_params)

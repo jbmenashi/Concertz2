@@ -1,9 +1,0 @@
-<h1> Join a Squad </h1>
-
-<%= form_for @user_squad do |f| %>
-  <%= f.label :user %>
-  <%= f.text_field :user %> #should be filled in with user
-  <%= f.label :squad %>
-  <%= f.collection_select :squad_id, Squad.all, :id, :name, prompt: "Select Squad" %>
-  <%= f.submit %>
-<% end %>
