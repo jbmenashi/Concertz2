@@ -18,7 +18,7 @@ h1 {
   margin: 0 auto;
   align-items: center;
   border: 5px solid black;
-  display:flex;
+  display: flex;
   justify-content: center;
   display: grid;
   font-weight: bold;
@@ -27,4 +27,13 @@ h1 {
 .ui.purple.button {
   margin-left: 10px;
   border: 1px solid black;
+}
+
+.error {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+
 }

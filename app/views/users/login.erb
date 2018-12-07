@@ -8,3 +8,9 @@
     <%= submit_tag "Login!", class: "ui purple button"%>
   <% end %>
 </div>
+
+<div class="error">
+  <% if flash[:error]  %>
+    <%= flash[:error] %>
+  <% end %>
+</div>

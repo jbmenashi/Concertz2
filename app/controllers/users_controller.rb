@@ -22,8 +22,13 @@ class UsersController < ApplicationController
   def authorize
     @user = User.find_or_create_by(username: params[:username])
 
-    session[:user_id] = @user.id
-    redirect_to user_path(@user)
+    if @user.username != ""
+      session[:user_id] = @user.id
+      redirect_to user_path(@user)
+    else
+      flash[:error] = "Must enter a username"
+      redirect_to login_path
+    end
   end
 
 
