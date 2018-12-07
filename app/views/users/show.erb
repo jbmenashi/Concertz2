@@ -1,6 +1,8 @@
 <h1>My Profile</h1>
 
-<img src=<%= @user.image %>, id="profile_pic">
+<% if @user.image %>
+<%= image_tag @user.image, id: 'profile_pic' %>
+<% end %>
 
 <div class="user_info">
   <strong>Name: </strong> <%= @user.name %><br>
@@ -13,8 +15,6 @@
       <% end %>
     </ul>
 </div>
-
-
 
 
 

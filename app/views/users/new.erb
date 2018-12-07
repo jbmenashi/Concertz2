@@ -1,0 +1,10 @@
+<h1>Register Below!</h1>
+<div class="login_form">
+  <%= form_for @user do |f| %>
+    <%= f.label :username  %>
+    <%= f.text_field :username %><br>
+    <%= f.label :password  %>
+    <%= f.password_field :password %>
+    <%= f.submit "Register",  class: "ui purple button" %>
+    <% end %>
+</div>
